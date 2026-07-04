@@ -127,7 +127,7 @@ namespace Messenger_MISHA
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error); 
                 }
             }
         }
