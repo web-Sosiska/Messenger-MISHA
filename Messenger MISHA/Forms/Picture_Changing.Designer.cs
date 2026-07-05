@@ -73,7 +73,7 @@
             pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox6.TabIndex = 10;
             pictureBox6.TabStop = false;
-            pictureBox6.MouseClick += pictureBox6_MouseClick;
+            //pictureBox6.MouseClick += pictureBox6_MouseClick;
             // 
             // pictureBox5
             // 
@@ -84,7 +84,7 @@
             pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox5.TabIndex = 9;
             pictureBox5.TabStop = false;
-            pictureBox5.MouseClick += pictureBox5_MouseClick;
+            //pictureBox5.MouseClick += pictureBox5_MouseClick;
             // 
             // pictureBox4
             // 
@@ -95,7 +95,7 @@
             pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox4.TabIndex = 8;
             pictureBox4.TabStop = false;
-            pictureBox4.MouseClick += pictureBox4_MouseClick;
+            //pictureBox4.MouseClick += pictureBox4_MouseClick;
             // 
             // pictureBox3
             // 
@@ -106,7 +106,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 7;
             pictureBox3.TabStop = false;
-            pictureBox3.MouseClick += pictureBox3_MouseClick;
+            //pictureBox3.MouseClick += pictureBox3_MouseClick;
             // 
             // pictureBox1
             // 
@@ -117,7 +117,7 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
-            pictureBox1.MouseClick += pictureBox1_MouseClick;
+            //pictureBox1.MouseClick += pictureBox1_MouseClick;
             // 
             // button1_save_picture
             // 
@@ -139,7 +139,7 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 4;
             pictureBox2.TabStop = false;
-            pictureBox2.MouseClick += pictureBox2_MouseClick;
+            //pictureBox2.MouseClick += pictureBox2_MouseClick;
             // 
             // button_X2
             // 
