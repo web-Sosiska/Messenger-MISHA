@@ -1,19 +1,29 @@
-﻿using System;
+﻿using Messenger_MISHA.ClassDatabase;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using static Messenger_MISHA.ClassDatabase.DatabaseTables;
 
 namespace Messenger_MISHA
 {
     public partial class AccauntForm : Form
     {
+        private DatabaseHelperConnect dbHelper = new DatabaseHelperConnect();
+        private List<Registration> RegistrationsList { get; set; }
+
+        private string currentNikname = "";
+        private string currentEmail = "";
+        private string currentPassword = "";
+        private Image currentImage = null;
         public AccauntForm()
         {
             InitializeComponent();
             this.Load += AccauntForm_Load;
+
 
             // События для поля Имя
             textBox_Name.Enter += textBox_Name_Enter;
@@ -32,6 +42,15 @@ namespace Messenger_MISHA
             textBox_Email.Leave += textBox_Email_Leave;
             textBox_Email.KeyPress += textBox_Email_KeyPress;
             textBox_Email.TextChanged += textBox_EmailChanged;
+
+            
+
+            RegistrationsList = new List<Registration>();
+            textBox_Name.TextChanged += textBox_Name_TextChanged;
+            textBox_Email.TextChanged += textBox_Email_TextChanged;
+            textBox_password.TextChanged += textBox_password_TextChanged_1;
+            pictureBox2.Click += pictureBox2_Click;
+            LoadRegistrations();
         }
 
         // Поля класса
@@ -56,6 +75,22 @@ namespace Messenger_MISHA
             {
                 MessageBox.Show("Невозможно открыть выбранный файл!", "Ошибка",
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void LoadRegistrations()
+        {
+            try
+            {
+                // Если есть метод в DatabaseHelper
+                // RegistrationsList = dbHelper.GetAllRegistrations();
+
+                // Или просто тестовые данные
+                // RegistrationsList.Add(new Registration { Nikname = "Test", Email = "test@test.com" });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка загрузки: {ex.Message}", "Ошибка",
+                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void AccauntForm_Load(object sender, EventArgs e)
@@ -686,7 +721,25 @@ namespace Messenger_MISHA
 
         private void button_save_info_Click(object sender, EventArgs e)
         {
+            // Используем все переменные
+            if (!string.IsNullOrEmpty(currentNikname) &&
+                !string.IsNullOrEmpty(currentEmail) &&
+                !string.IsNullOrEmpty(currentPassword))
+            {
+                Registration newReg = new Registration
+                {
+                    Nikname = currentNikname,
+                    Email = currentEmail,
+                    Password = currentPassword,
+                    Image = currentImage
+                };
 
+                RegistrationsList.Add(newReg); // Используется список
+                                               // dbHelper.SaveRegistration(newReg);
+
+                MessageBox.Show("Сохранено!", "Успех",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void button_Ico_Click(object sender, EventArgs e)
@@ -696,21 +749,24 @@ namespace Messenger_MISHA
         }
         private void textBox_Name_TextChanged(object sender, EventArgs e)
         {
-
+            currentNikname = textBox_Name.Text;
         }
         private void textBox_password_TextChanged_1(object sender, EventArgs e)
         {
-
+            currentPassword = textBox_password.Text;
         }
 
         private void textBox_Email_TextChanged(object sender, EventArgs e)
         {
-
+            currentEmail = textBox_Email.Text;
         }
 
         public void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            if (pictureBox2.Image != null)
+            {
+                currentImage = pictureBox2.Image;
+            }
         }
     }
 }

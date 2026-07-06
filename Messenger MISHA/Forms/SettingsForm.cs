@@ -14,5 +14,15 @@ namespace Messenger_MISHA
         {
             InitializeComponent();
         }
+
+        private void panel_settings_vid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label_name_pannel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

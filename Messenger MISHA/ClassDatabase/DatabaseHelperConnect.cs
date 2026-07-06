@@ -122,9 +122,10 @@ namespace Messenger_MISHA.ClassDatabase
         public class Registration
         {
             public int ID { get; set; }
-            public string Nikname { get; set; }
-            public string Email { get; set; }
-            public string Password { get; set; }
+            public string nikname { get; set; }
+            public string email { get; set; }
+            public string password { get; set; }
+            public Image image { get; set; }
         }
 
         // 5. Таблица Account

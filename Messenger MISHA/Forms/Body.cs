@@ -193,5 +193,10 @@ namespace Messenger_MISHA
         {
             this.Close();
         }
+
+        private void label_name_pannel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

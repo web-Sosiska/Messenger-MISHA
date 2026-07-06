@@ -273,6 +273,7 @@
             label_name_pannel.Size = new Size(126, 32);
             label_name_pannel.TabIndex = 0;
             label_name_pannel.Text = "Аккаунт";
+            label_name_pannel.Click += label_name_pannel_Click;
             // 
             // Body
             // 
