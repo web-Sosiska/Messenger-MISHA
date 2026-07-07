@@ -728,10 +728,10 @@ namespace Messenger_MISHA
             {
                 Registration newReg = new Registration
                 {
-                    Nikname = currentNikname,
-                    Email = currentEmail,
-                    Password = currentPassword,
-                    Image = currentImage
+                    nikname = currentNikname,
+                    email = currentEmail,
+                    password = currentPassword,
+                    image = currentImage
                 };
 
                 RegistrationsList.Add(newReg); // Используется список
