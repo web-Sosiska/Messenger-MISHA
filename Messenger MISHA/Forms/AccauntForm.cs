@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using static Messenger_MISHA.ClassDatabase.DatabaseTables;
@@ -14,7 +15,15 @@ namespace Messenger_MISHA
     {
         private DatabaseHelperConnect dbHelper = new DatabaseHelperConnect();
         private List<Registration> RegistrationsList { get; set; }
-
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+int nLeftRect,     // x верхнего левого угла
+int nTopRect,      // y верхнего левого угла
+int nRightRect,    // x нижнего правого угла
+int nBottomRect,   // y нижнего правого угла
+int nWidthEllipse, // ширина эллипса (радиус по X)
+int nHeightEllipse // высота эллипса (радиус по Y)
+);
         private string currentNikname = "";
         private string currentEmail = "";
         private string currentPassword = "";
@@ -23,6 +32,8 @@ namespace Messenger_MISHA
         {
             InitializeComponent();
             this.Load += AccauntForm_Load;
+
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
 
             // События для поля Имя

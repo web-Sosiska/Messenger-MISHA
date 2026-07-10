@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,7 +12,16 @@ namespace Messenger_MISHA
     public partial class Picture_Changing : Form
     {
         private PictureBox selectedPictureBox = null;
-        
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+        int nLeftRect,     // x верхнего левого угла
+        int nTopRect,      // y верхнего левого угла
+        int nRightRect,    // x нижнего правого угла
+        int nBottomRect,   // y нижнего правого угла
+        int nWidthEllipse, // ширина эллипса (радиус по X)
+        int nHeightEllipse // высота эллипса (радиус по Y)
+    );
+
         public Picture_Changing()
         {
             InitializeComponent();
@@ -21,7 +31,7 @@ namespace Messenger_MISHA
             pictureBox4.MouseClick += PictureBox_MouseClick;
             pictureBox5.MouseClick += PictureBox_MouseClick;
             pictureBox6.MouseClick += PictureBox_MouseClick;
-
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
         }
 
         public class picture_MouseClic

@@ -112,6 +112,7 @@
             button_groop_create.TabIndex = 9;
             button_groop_create.Text = "Создать группу";
             button_groop_create.UseVisualStyleBackColor = false;
+            button_groop_create.Click += button_groop_create_Click;
             // 
             // panel2
             // 

@@ -32,9 +32,9 @@
             button_create_chat = new Button();
             panel_chat_vid = new Panel();
             panel1 = new Panel();
+            pictureBox1 = new PictureBox();
             textBox_info4 = new TextBox();
             textBox_Info3 = new TextBox();
-            pictureBox1 = new PictureBox();
             panel_create_chat.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -83,6 +83,15 @@
             panel1.Size = new Size(532, 48);
             panel1.TabIndex = 31;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.image_35__1_;
+            pictureBox1.Location = new Point(11, 9);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(28, 28);
+            pictureBox1.TabIndex = 4;
+            pictureBox1.TabStop = false;
+            // 
             // textBox_info4
             // 
             textBox_info4.BackColor = Color.FromArgb(37, 42, 64);
@@ -111,15 +120,6 @@
             textBox_Info3.TabIndex = 2;
             textBox_Info3.Text = " У вас на аккаунте ";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.image_35__1_;
-            pictureBox1.Location = new Point(11, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(28, 28);
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
             // ChatForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -132,6 +132,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "ChatForm";
             Text = "ChatForm";
+            Load += ChatForm_Load;
             panel_create_chat.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
