@@ -30,5 +30,15 @@ int nHeightEllipse // высота эллипса (радиус по Y)
         {
 
         }
+
+        private void button_X4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label_temm_name_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Messenger_MISHA.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,7 +34,8 @@ int nHeightEllipse // высота эллипса (радиус по Y)
 
         private void button_Ico_Click_1(object sender, EventArgs e)
         {
-
+            CreateChannel CreateChannelForm = new CreateChannel();
+            CreateChannelForm.Show();
         }
 
         private void textBox_info2_TextChanged(object sender, EventArgs e)

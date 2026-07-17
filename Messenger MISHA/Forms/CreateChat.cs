@@ -30,5 +30,10 @@ namespace Messenger_MISHA.Forms
         {
 
         }
+
+        private void button_X4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
