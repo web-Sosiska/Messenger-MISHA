@@ -30,11 +30,11 @@
         {
             panel_create_chat = new Panel();
             button_create_chat = new Button();
-            panel_chat_vid = new Panel();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             textBox_info4 = new TextBox();
             textBox_Info3 = new TextBox();
+            flowLayoutPanel_chat = new FlowLayoutPanel();
             panel_create_chat.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,14 +63,6 @@
             button_create_chat.Text = "Создать чат";
             button_create_chat.UseVisualStyleBackColor = false;
             button_create_chat.Click += button_Ico_Click;
-            // 
-            // panel_chat_vid
-            // 
-            panel_chat_vid.BackColor = Color.FromArgb(37, 42, 64);
-            panel_chat_vid.Location = new Point(12, 78);
-            panel_chat_vid.Name = "panel_chat_vid";
-            panel_chat_vid.Size = new Size(745, 410);
-            panel_chat_vid.TabIndex = 31;
             // 
             // panel1
             // 
@@ -120,14 +112,23 @@
             textBox_Info3.TabIndex = 2;
             textBox_Info3.Text = " У вас на аккаунте ";
             // 
+            // flowLayoutPanel_chat
+            // 
+            flowLayoutPanel_chat.BackColor = Color.FromArgb(37, 42, 64);
+            flowLayoutPanel_chat.Location = new Point(12, 66);
+            flowLayoutPanel_chat.Name = "flowLayoutPanel_chat";
+            flowLayoutPanel_chat.Size = new Size(745, 422);
+            flowLayoutPanel_chat.TabIndex = 32;
+            flowLayoutPanel_chat.Paint += flowLayoutPanel_chat_Paint;
+            // 
             // ChatForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(784, 500);
+            Controls.Add(flowLayoutPanel_chat);
             Controls.Add(panel1);
-            Controls.Add(panel_chat_vid);
             Controls.Add(panel_create_chat);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ChatForm";
@@ -143,11 +144,11 @@
         #endregion
 
         private Panel panel_create_chat;
-        private Panel panel_chat_vid;
         private Panel panel1;
         private Button button_create_chat;
         private TextBox textBox_Info3;
         private TextBox textBox_info4;
         private PictureBox pictureBox1;
+        private FlowLayoutPanel flowLayoutPanel_chat;
     }
 }

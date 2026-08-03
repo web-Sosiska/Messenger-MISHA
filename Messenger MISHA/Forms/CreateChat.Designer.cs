@@ -79,6 +79,7 @@
             button_save_chat_settings.TabIndex = 6;
             button_save_chat_settings.Text = "Сохранить ";
             button_save_chat_settings.UseVisualStyleBackColor = false;
+            button_save_chat_settings.Click += button_save_chat_settings_Click;
             // 
             // label_save_settings_name_chat
             // 
@@ -237,6 +238,7 @@
             textBox_Name.Name = "textBox_Name";
             textBox_Name.Size = new Size(458, 25);
             textBox_Name.TabIndex = 1;
+            textBox_Name.TextChanged += textBox_Name_TextChanged;
             // 
             // panel_chat_create_name
             // 

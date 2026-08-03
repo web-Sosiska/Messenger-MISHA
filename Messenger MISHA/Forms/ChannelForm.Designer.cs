@@ -96,6 +96,7 @@
             panel_channel_vid.Name = "panel_channel_vid";
             panel_channel_vid.Size = new Size(746, 410);
             panel_channel_vid.TabIndex = 33;
+            panel_channel_vid.Paint += panel_channel_vid_Paint;
             // 
             // panel_create_chat
             // 

@@ -42,28 +42,9 @@ namespace Messenger_MISHA
             FrmDashboard_Vrb.Show();
         }
 
-        private CreateChat chatForm;
+        
 
-        private void OpenCreateChat()
-        {
-            if (chatForm != null && !chatForm.IsDisposed)
-            {
-                chatForm.BringToFront();
-                return;
-            }
-
-            this.Opacity = 0.5;
-            this.Enabled = false;
-
-            chatForm = new CreateChat();
-            chatForm.FormClosed += (s, e) =>
-            {
-                this.Opacity = 1.0;
-                this.Enabled = true;
-                chatForm = null;
-            };
-            chatForm.ShowDialog();
-        }
+        
 
         private void Body_Load(object sender, EventArgs e)
         {

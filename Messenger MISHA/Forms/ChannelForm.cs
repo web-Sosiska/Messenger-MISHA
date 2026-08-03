@@ -47,5 +47,10 @@ int nHeightEllipse // высота эллипса (радиус по Y)
         {
 
         }
+
+        private void panel_channel_vid_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

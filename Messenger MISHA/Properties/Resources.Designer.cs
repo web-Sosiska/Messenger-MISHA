@@ -253,6 +253,16 @@ namespace Messenger_MISHA.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_57 {
+            get {
+                object obj = ResourceManager.GetObject("image 57", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_account_avatar_profile_user_avatars_icon_1 {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-account-avatar-profile-user-avatars-icon 1", resourceCulture);

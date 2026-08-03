@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="image 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="i" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\i.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 36" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 36.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,23 +151,26 @@
   <data name="image 431" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 431.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\i.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="avatar 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\avatar 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="8340826 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8340826 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image 44" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 44.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 36 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 36 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="avatar 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\avatar 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 40 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 40 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="png-transparent-account-avatar-profile-user-avatars-icon 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-account-avatar-profile-user-avatars-icon 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image 41" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,10 +181,10 @@
   <data name="image 38" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image 38.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-transparent-account-avatar-profile-user-avatars-icon 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-account-avatar-profile-user-avatars-icon 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 36 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 36 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8340826 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8340826 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 57" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 57.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
