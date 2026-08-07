@@ -14,5 +14,10 @@ namespace Messenger_MISHA
         {
             InitializeComponent();
         }
+
+        private void labelCount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

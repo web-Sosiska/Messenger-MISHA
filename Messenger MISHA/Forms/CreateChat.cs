@@ -26,7 +26,7 @@ namespace Messenger_MISHA.Forms
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
-            
+
         }
         public CreateChat(ChatForm chatForm) : this() // Вызываем конструктор по умолчанию
         {
@@ -73,11 +73,53 @@ namespace Messenger_MISHA.Forms
             this.Close();
 
 
-            
+
 
         }
 
         private void textBox_Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Ico_chat_avatar_Click(object sender, EventArgs e)
+        {
+            // Создаем диалоговое окно выбора файла
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                // Настраиваем заголовок
+                openFileDialog.Title = "Выберите аватарку";
+
+                // Фильтр только для картинок (png, jpeg, jpg, bmp, gif)
+                openFileDialog.Filter = "Изображения (*.png;*.jpeg;*.jpg;*.bmp;*.gif)|*.png;*.jpeg;*.jpg;*.bmp;*.gif|Все файлы (*.*)|*.*";
+
+                // Запоминаем последнюю открытую папку (удобно для пользователя)
+                openFileDialog.RestoreDirectory = true;
+
+                // Открываем диалог и проверяем, нажал ли пользователь "ОК"
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // Загружаем выбранную картинку в PictureBox
+                        // Используем FileStream, чтобы не блокировать файл на диске (лучшая практика)
+                        using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                        {
+                            pictureBox1_Avatar_chat.Image = Image.FromStream(fs);
+                        }
+
+                        // Дополнительно: можно поменять SizeMode, чтобы картинка красиво вписалась
+                        pictureBox1_Avatar_chat.SizeMode = PictureBoxSizeMode.Zoom;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Не удалось загрузить изображение: " + ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void pictureBox1_Avatar_chat_Click(object sender, EventArgs e)
         {
 
         }
