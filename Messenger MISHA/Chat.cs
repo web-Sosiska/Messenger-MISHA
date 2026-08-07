@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Messenger_MISHA.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,5 +76,66 @@ namespace Messenger_MISHA
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            CreateChat CreateChatForm = new CreateChat();
+            CreateChatForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Title = "Выберите файлы";
+                openFileDialog.Multiselect = true;
+                openFileDialog.Filter = "Все файлы (*.*)|*.*";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    flowLayoutPanelFiles.Controls.Clear();
+
+                    foreach (string filePath in openFileDialog.FileNames)
+                    {
+                        // Создаем панель для каждого файла
+                        Panel filePanel = new Panel();
+                        filePanel.Size = new Size(200, 30);
+                        filePanel.Margin = new Padding(0);
+                        filePanel.BackColor = SystemColors.InactiveCaption;
+                        filePanel.BorderStyle = BorderStyle.None;
+
+                        // Метка с именем файла
+                        Label fileLabel = new Label();
+                        fileLabel.Text = Path.GetFileName(filePath);
+                        fileLabel.Location = new Point(5, 5);
+                        fileLabel.AutoSize = true;
+
+                        // Кнопка удаления
+                        Button removeBtn = new Button();
+                        removeBtn.Text = "✕";
+                        removeBtn.Size = new Size(25, 25);
+                        removeBtn.Location = new Point(175, 5);
+                        removeBtn.FlatStyle = FlatStyle.Flat;
+                        removeBtn.Click += (s, e) =>
+                        {
+                            flowLayoutPanelFiles.Controls.Remove(filePanel);
+                            UpdateFileCount();
+                        };
+
+                        filePanel.Controls.Add(fileLabel);
+                        filePanel.Controls.Add(removeBtn);
+                        flowLayoutPanelFiles.Controls.Add(filePanel);
+                    }
+
+                    UpdateFileCount();
+                }
+            }
+        }
+
+        private void UpdateFileCount()
+        {
+            labelCount.Text = $"Файлов: {flowLayoutPanelFiles.Controls.Count}";
+        }
     }
+    
 }

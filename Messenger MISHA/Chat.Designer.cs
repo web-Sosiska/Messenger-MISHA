@@ -38,6 +38,9 @@
             button3 = new Button();
             button2 = new Button();
             textBox_pisat = new TextBox();
+            button4 = new Button();
+            flowLayoutPanelFiles = new FlowLayoutPanel();
+            labelCount = new Label();
             panel_chapka.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1_Avatar_chat_2).BeginInit();
             panel1.SuspendLayout();
@@ -49,7 +52,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
             button1.ForeColor = SystemColors.ButtonFace;
-            button1.Location = new Point(558, 12);
+            button1.Location = new Point(564, 12);
             button1.Name = "button1";
             button1.Size = new Size(30, 30);
             button1.TabIndex = 0;
@@ -64,7 +67,7 @@
             panel_chapka.Controls.Add(label_name_chat);
             panel_chapka.Location = new Point(5, 12);
             panel_chapka.Name = "panel_chapka";
-            panel_chapka.Size = new Size(553, 127);
+            panel_chapka.Size = new Size(441, 127);
             panel_chapka.TabIndex = 1;
             // 
             // textBox_chat_Description_2
@@ -74,10 +77,10 @@
             textBox_chat_Description_2.Cursor = Cursors.IBeam;
             textBox_chat_Description_2.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             textBox_chat_Description_2.ForeColor = SystemColors.ScrollBar;
-            textBox_chat_Description_2.Location = new Point(133, 36);
+            textBox_chat_Description_2.Location = new Point(133, 57);
             textBox_chat_Description_2.Multiline = true;
             textBox_chat_Description_2.Name = "textBox_chat_Description_2";
-            textBox_chat_Description_2.Size = new Size(411, 84);
+            textBox_chat_Description_2.Size = new Size(300, 63);
             textBox_chat_Description_2.TabIndex = 3;
             // 
             // pictureBox1_Avatar_chat_2
@@ -97,7 +100,7 @@
             label_name_chat.AutoSize = true;
             label_name_chat.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
             label_name_chat.ForeColor = SystemColors.ControlLightLight;
-            label_name_chat.Location = new Point(133, 9);
+            label_name_chat.Location = new Point(133, 33);
             label_name_chat.Name = "label_name_chat";
             label_name_chat.Size = new Size(53, 21);
             label_name_chat.TabIndex = 0;
@@ -110,7 +113,7 @@
             flowLayoutPanel_sam_chat.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel_sam_chat.Location = new Point(5, 145);
             flowLayoutPanel_sam_chat.Name = "flowLayoutPanel_sam_chat";
-            flowLayoutPanel_sam_chat.Size = new Size(583, 540);
+            flowLayoutPanel_sam_chat.Size = new Size(583, 490);
             flowLayoutPanel_sam_chat.TabIndex = 2;
             flowLayoutPanel_sam_chat.WrapContents = false;
             flowLayoutPanel_sam_chat.Paint += flowLayoutPanel_sam_chat_Paint;
@@ -137,6 +140,7 @@
             button3.Size = new Size(28, 33);
             button3.TabIndex = 2;
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -163,12 +167,51 @@
             textBox_pisat.TabIndex = 0;
             textBox_pisat.TextChanged += textBox1_TextChanged;
             // 
+            // button4
+            // 
+            button4.BackColor = SystemColors.InactiveCaption;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
+            button4.Location = new Point(452, 97);
+            button4.Name = "button4";
+            button4.Size = new Size(136, 42);
+            button4.TabIndex = 4;
+            button4.Text = "Изменить чат";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // flowLayoutPanelFiles
+            // 
+            flowLayoutPanelFiles.AutoScroll = true;
+            flowLayoutPanelFiles.BackColor = Color.FromArgb(74, 79, 99);
+            flowLayoutPanelFiles.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanelFiles.Location = new Point(121, 641);
+            flowLayoutPanelFiles.Name = "flowLayoutPanelFiles";
+            flowLayoutPanelFiles.Padding = new Padding(10);
+            flowLayoutPanelFiles.Size = new Size(467, 46);
+            flowLayoutPanelFiles.TabIndex = 5;
+            flowLayoutPanelFiles.WrapContents = false;
+            // 
+            // labelCount
+            // 
+            labelCount.AutoSize = true;
+            labelCount.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            labelCount.ForeColor = SystemColors.ButtonHighlight;
+            labelCount.Location = new Point(5, 656);
+            labelCount.Name = "labelCount";
+            labelCount.Size = new Size(51, 21);
+            labelCount.TabIndex = 7;
+            labelCount.Text = "label1";
+            // 
             // Chat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 51, 73);
             ClientSize = new Size(600, 750);
+            Controls.Add(labelCount);
+            Controls.Add(flowLayoutPanelFiles);
+            Controls.Add(button4);
             Controls.Add(panel1);
             Controls.Add(flowLayoutPanel_sam_chat);
             Controls.Add(panel_chapka);
@@ -182,6 +225,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -196,5 +240,8 @@
         private Button button3;
         private Button button2;
         private TextBox textBox_pisat;
+        private Button button4;
+        private FlowLayoutPanel flowLayoutPanelFiles;
+        private Label labelCount;
     }
 }
